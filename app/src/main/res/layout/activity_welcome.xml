@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.mina.limecatapplication.WelcomeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datemsg"
+        android:text="Enter Date"
+        android:textAppearance="?android:textAppearanceLarge"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp" />
+
+    <EditText
+        android:id="@+id/msg_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter date (ex.19)"
+
+        android:layout_below="@+id/datemsg"
+        />
+
+    <EditText
+        android:id="@+id/msg_text_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter month (ex.12)"
+
+        android:layout_toRightOf="@+id/msg_text_date"
+        android:layout_alignBottom="@+id/msg_text_date"
+        />
+
+    <EditText
+        android:id="@+id/msg_text_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter year (ex.1985)"
+
+        android:layout_below="@+id/msg_text_date"
+        />
+
+    <Button
+        android:id="@+id/sendTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/welcomePic"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="32dp"
+        android:onClick="sendTemp"
+        android:text="Mean Temperature" />
+
+    <Button
+        android:id="@+id/sendPreci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sendTemp"
+        android:layout_centerHorizontal="true"
+
+        android:onClick="sendPreci"
+        android:text="Precipication" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomePic"
+        app:srcCompat="@drawable/welcom"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
